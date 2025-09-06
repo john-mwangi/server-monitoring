@@ -4,7 +4,7 @@ services:
     container_name: beszel
     restart: unless-stopped
     ports:
-      - 8090:8090
+      - 8089:8090
     volumes:
       - ./beszel_data:/beszel_data
       - ./beszel_socket:/beszel_socket
@@ -12,7 +12,6 @@ services:
     image: henrygd/beszel-agent
     container_name: beszel-agent
     restart: unless-stopped
-    network_mode: host
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./beszel_agent_data:/var/lib/beszel-agent
@@ -22,4 +21,6 @@ services:
       LISTEN: /beszel_socket/beszel.sock
       KEY: ${BESZEL_KEY}
       TOKEN: ${BESZEL_TOKEN}
-      HUB_URL: http://localhost:8090
+      HUB_URL: http://beszel:8090
+    depends_on:
+      - beszel
