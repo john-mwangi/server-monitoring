@@ -52,3 +52,7 @@ Fix: Verify that the KEY and TOKEN in your .env file are correct and match the v
 docker-compose logs beszel
 docker-compose logs beszel-agent
 ```
+
+## 📸 Screenshot
+
+![Beszel Dashboard](./localhost-Beszel.png)
