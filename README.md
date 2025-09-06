@@ -27,6 +27,7 @@ echo "BESZEL_TOKEN=your_generated_token_here" >> .env
 ```
 
 **Launch the containers:**
+
 Start the Beszel server and agent in detached mode.
 
 ```bash
