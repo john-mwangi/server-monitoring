@@ -7,6 +7,7 @@ Beszel to monitor a single machine via Docker.
 ## 🚀 Quick Start
 
 **Generate authentication keys:**
+
 Beszel requires a KEY and a TOKEN for the agent to authenticate with the server. 
 You can generate these from: https://beszel.dev/guide/getting-started
 
